@@ -1,0 +1,9 @@
+export { default as certifications } from "./certifications";
+export { default as companylogos } from "./companylogos";
+export { default as countries } from "./countries";
+export { default as industriesData } from "./industriesData";
+export { default as logos } from "./logos";
+export { default as servicesData } from "./servicesData";
+export { default as smallCards } from "./smallCards";
+export { default as state } from "./state";
+export { default as testimonials } from "./testimonials";

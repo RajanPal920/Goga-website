@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@theme {
+  --color-goga-navy: #173f52;
+  --color-goga-navy-dark: #102f3d;
+  --color-goga-red: #d92b20;
+  --color-goga-red-dark: #b91f17;
+  --color-goga-light: #f5f6f7;
+  --color-goga-border: #d9dde1;
+  --color-goga-text: #1f2933;
+  --color-goga-muted: #667085;
+  --color-goga-metallic: #8a8f94;
+}
+:root {
+  --primary: #173f52;
+  --primary-dark: #102f3d;
+  --secondary: #d92b20;
+  --secondary-dark: #b91f17;
+  --white: #ffffff;
+  --light-gray: #f5f6f7;
+  --border: #d9dde1;
+  --text: #1f2933;
+  --muted: #667085;
+  --metallic: #8a8f94;
+
+  /* =========================
+     NAVBAR HEIGHT
+     ========================= */
+  --navbar-top-height: 0vh; /* top contact bar (hidden on mobile) */
+  --navbar-main-height: 8vh; /* main navigation row */
+  --navbar-total-height: calc(
+    var(--navbar-top-height) + var(--navbar-main-height)
+  );
+}
+
+/* =========================
+   DESKTOP NAVBAR
+   ========================= */
+@media (min-width: 1024px) {
+  :root {
+    --navbar-top-height: 4vh;
+    --navbar-main-height: 12vh;
+    /* --navbar-total-height recalculates automatically: 16vh */
+  }
+}
+
+/* =========================
+   BASE
+   ========================= */
+
+@layer base {
+  html,
+  body,
+  #root {
+    width: 100%;
+    max-width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+
+    color: var(--text);
+    background-color: var(--white);
+
+    font-family:
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      Roboto,
+      Oxygen,
+      Ubuntu,
+      Cantarell,
+      "Open Sans",
+      sans-serif;
+  }
+
+  body {
+    margin: 0;
+  }
+}
