@@ -36,7 +36,7 @@ import {
   jsl,
   viz,
   sail,
-  msl
+  msl,
 } from "../../assets";
 
 import {
@@ -232,7 +232,7 @@ const Hero4 = () => {
       {/* =============================== */}
       {/* SECTION 1: THIRD-PARTY INSPECTION AGENCIES */}
       {/* =============================== */}
-      <section className="w-full bg-[#173F52] text-white py-20 px-6 md:px-16 lg:px-24 flex flex-col items-center relative overflow-hidden font-sans">
+      <section className="w-full bg-[#143d50] text-white py-20 px-6 md:px-16 lg:px-24 flex flex-col items-center relative overflow-hidden font-sans mb-10">
         <div className="absolute inset-0 bg-[linear-gradient(rgba(215,155,32,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(215,155,32,0.05)_1px,transparent_1px)] bg-[size:48px_48px]"></div>
 
         <div className="flex flex-col justify-center items-center gap-5 max-w-4xl mx-auto text-center mb-16 relative z-10">
@@ -301,7 +301,7 @@ const Hero4 = () => {
       {/* =============================== */}
       {/* SECTION 2: GLOBAL INDUSTRIAL CERTIFICATIONS */}
       {/* =============================== */}
-      <section className="w-full bg-[#0d1f4a] text-white py-20 px-6 md:px-16 lg:px-24 flex flex-col items-center relative overflow-hidden font-sans">
+      <section className="w-full bg-[#143d50] text-white py-20 px-6 md:px-16 lg:px-24 flex flex-col items-center relative overflow-hidden font-sans">
         <div className="absolute inset-0 bg-[linear-gradient(rgba(215,155,32,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(215,155,32,0.05)_1px,transparent_1px)] bg-[size:48px_48px]"></div>
 
         <div className="flex flex-col justify-center items-center gap-5 max-w-4xl mx-auto text-center mb-16 relative z-10">
@@ -384,10 +384,9 @@ const Hero4 = () => {
                 <FaShieldAlt className="w-6 h-6 text-[#D92B20]" />
               </div>
               <p className="text-slate-600 font-medium text-[15px] md:text-base leading-relaxed text-left uppercase">
-                GOGA STAINLESS COMMANDS SYSTEMIC QUALITY
-                CONTROL OVER A DIVERSE INVENTORY OF CRITICAL PIPELINE
-                CONFIGURATIONS, FORGED STEEL ASSEMBLIES, STRUCTURAL FASTENERS
-                AND HEAVY-DUTY PLATES.
+                GOGA STAINLESS COMMANDS SYSTEMIC QUALITY CONTROL OVER A DIVERSE
+                INVENTORY OF CRITICAL PIPELINE CONFIGURATIONS, FORGED STEEL
+                ASSEMBLIES, STRUCTURAL FASTENERS AND HEAVY-DUTY PLATES.
               </p>
             </div>
 
@@ -705,10 +704,10 @@ const Hero4 = () => {
             </h1>
 
             <p className="mt-6 text-slate-300 leading-8 uppercase text-sm md:text-base">
-              GOGA STAINLESS OPERATES A SOPHISTICATED
-              INDUSTRIAL SUPPLY CHAIN, SERVING AS A CRITICAL MATERIAL PARTNER
-              FOR REFINERIES, PETROCHEMICAL PLANTS, AND POWER STATIONS ACROSS
-              50+ COUNTRIES AND EVERY MAJOR INDUSTRIAL HUB IN INDIA.
+              GOGA STAINLESS OPERATES A SOPHISTICATED INDUSTRIAL SUPPLY CHAIN,
+              SERVING AS A CRITICAL MATERIAL PARTNER FOR REFINERIES,
+              PETROCHEMICAL PLANTS, AND POWER STATIONS ACROSS 50+ COUNTRIES AND
+              EVERY MAJOR INDUSTRIAL HUB IN INDIA.
             </p>
 
             <div className="mt-10 flex flex-wrap gap-8">
@@ -810,9 +809,9 @@ const Hero4 = () => {
           <div className="w-24 h-1 bg-gradient-to-r from-[#173F52] to-[#D92B20] rounded-full"></div>
 
           <p className="text-[#173F52]/70 text-sm md:text-base max-w-2xl leading-relaxed mt-2 uppercase">
-            GOGA STAINLESS SERVES AS A CRITICAL MATERIAL
-            PARTNER FOR INDIA'S PREMIER INDUSTRIAL HUBS, DELIVERING
-            HIGH-INTEGRITY ALLOYS FOR ZERO-FAILURE PERFORMANCE.
+            GOGA STAINLESS SERVES AS A CRITICAL MATERIAL PARTNER FOR INDIA'S
+            PREMIER INDUSTRIAL HUBS, DELIVERING HIGH-INTEGRITY ALLOYS FOR
+            ZERO-FAILURE PERFORMANCE.
           </p>
         </div>
 
@@ -853,8 +852,8 @@ const Hero4 = () => {
           <div className="w-24 h-1 bg-gradient-to-r from-[#D92B20] to-white/30 rounded-full"></div>
 
           <p className="text-slate-300 text-sm md:text-base max-w-2xl leading-relaxed mt-2 uppercase">
-            AS A PREMIER ISO CERTIFIED MANUFACTURER, GOGA STAINLESS PVT.
-            LTD. MAINTAINS A HIGH-VELOCITY EXPORT CORRIDOR, DELIVERING
+            AS A PREMIER ISO CERTIFIED MANUFACTURER, GOGA STAINLESS PVT. LTD.
+            MAINTAINS A HIGH-VELOCITY EXPORT CORRIDOR, DELIVERING
             PRECISION-ENGINEERED PIPING SOLUTIONS TO OVER 50 COUNTRIES
             WORLDWIDE.
           </p>
