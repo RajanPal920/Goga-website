@@ -255,14 +255,22 @@ const Contact = () => {
       {/* =============================== */}
       {/* HERO SECTION */}
       {/* =============================== */}
-      <section
-        className="relative w-full min-h-[90vh] flex items-center"
-        style={{
-          backgroundImage: `url(${heroBg})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      ></section>
+  <section
+         className="relative w-full overflow-hidden bg-[#102F3D]"
+         style={{
+           aspectRatio: "1415/590",
+           marginTop: "var(--navbar-total-height)",
+         }}
+       >
+         {/* Background Image */}
+         <div className="absolute inset-0">
+           <img
+             src={heroBg}
+             alt="GOGA STAINLESS Hero Background"
+             className="w-full h-full object-cover object-center"
+           />
+         </div>
+       </section>
 
       {/* =============================== */}
       {/* TESTIMONIALS SECTION */}
@@ -753,7 +761,7 @@ const Contact = () => {
                 </span>
 
                 <h3 className="mt-3 text-xl font-bold tracking-wide text-white uppercase">
-                  MR. naresh mali
+                  MR. MAHENDRA HATDIA
                 </h3>
                 <p className="text-blue-100 text-xs mt-1 uppercase tracking-wider font-medium">
                   Head of Operations
