@@ -245,7 +245,7 @@ const Hero3 = () => {
               <img
                 src={icon}
                 alt="Download Udyam Certificate"
-                className="max-w-full max-h-full object-contain transition-transform duration-300 group-hover:scale-[1.02]"
+                className="max-w-full max-h-full  object-contain transition-transform duration-300 group-hover:scale-[1.02]"
               />
             </div>
             <span className="mt-2 text-xs font-semibold uppercase text-white/90">
