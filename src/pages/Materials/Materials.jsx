@@ -9,7 +9,7 @@ const Materials = () => {
     <section className="bg-gray-50 min-h-screen pt-[10%]">
       {/* Hero Banner - Premium */}
       <div
-        className="relative h-56 sm:h-64 md:h-80 lg:h-96 bg-cover bg-center"
+        className="relative h-58 sm:h-64 md:h-80 lg:h-96 bg-cover bg-center"
         style={{ backgroundImage: `url(${bannerIndustrial})` }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-[#173F52]/90 to-[#173F52]/70"></div>

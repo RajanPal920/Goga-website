@@ -78,7 +78,7 @@ const ProductList = () => {
     <section className="bg-gray-50 min-h-screen pt-[10%]">
       {/* Hero Banner */}
       <div
-        className="relative h-44 sm:h-56 md:h-72 lg:h-80 bg-cover bg-center"
+        className="relative h-60 sm:h-56 md:h-72 lg:h-80 bg-cover bg-center"
         style={{ backgroundImage: `url(${bannerIndustrial})` }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-[#173F52]/90 to-[#173F52]/70"></div>

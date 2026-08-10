@@ -390,7 +390,7 @@ const Alloy28RoundBars = () => {
       {/* HERO BANNER */}
       {/* =============================== */}
       <div
-        className="relative h-56 sm:h-64 md:h-80 bg-cover bg-center"
+        className="relative h-80 sm:h-64 md:h-80 bg-cover bg-center"
         style={{
           backgroundImage: `url(${bannerImage})`,
         }}

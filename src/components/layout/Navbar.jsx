@@ -64,9 +64,9 @@ export default function Navbar() {
                   >
                     <div className="flex items-center gap-2.5">
                       {item.icon ? (
-                        <item.icon className="w-4 h-4 text-[#A48C79]" />
+                        <item.icon className="w-4 h-4 text-[#173F52]" />
                       ) : (
-                        <span className="h-1.5 w-1.5 rounded-full bg-[#A48C79]" />
+                        <span className="h-1.5 w-1.5 rounded-full bg-[#173F52]" />
                       )}
                       <span className="tracking-wide whitespace-nowrap">
                         {item.name}
@@ -104,7 +104,7 @@ export default function Navbar() {
           className="w-full flex items-center justify-between px-4 py-3 text-left font-medium text-slate-700 hover:text-[#E52713] transition-colors"
         >
           <span className="flex items-center gap-2.5">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#A48C79]"></span>
+            <span className="w-1.5 h-1.5 rounded-full bg-[#173F52]"></span>
             {title}
           </span>
           <HiChevronDown
@@ -126,7 +126,7 @@ export default function Navbar() {
                 onClick={() => setMobileMenu(false)}
                 className="flex items-center gap-3 py-2 text-sm text-slate-600 hover:text-[#E52713] font-medium transition-colors"
               >
-                {item.icon && <item.icon className="w-4 h-4 text-[#A48C79]" />}
+                {item.icon && <item.icon className="w-4 h-4 text-[#173F52]" />}
                 {item.name}
               </NavLink>
             ))}
@@ -144,13 +144,8 @@ export default function Navbar() {
 
   return (
     <>
-      {/* =========================================================
-        STICKY NAVBAR CONTAINER
-      ========================================================= */}
       <div className="fixed top-0 left-0 w-full z-50 bg-white shadow-sm border-b border-slate-200/50">
-        {/* =========================================================
-          TOP BAR - Desktop Only
-        ========================================================= */}
+        {/* TOP BAR - Desktop Only */}
         <div className="hidden lg:flex h-[var(--navbar-top-height)] bg-[#E52713] text-white items-center">
           <div className="w-full h-full px-4 sm:px-6 lg:px-10 flex items-center justify-end">
             <div className="flex items-center gap-4 sm:gap-6 text-[11px] sm:text-xs">
@@ -169,7 +164,6 @@ export default function Navbar() {
                 <span>gogastainless@gmail.com</span>
               </a>
               <div className="flex items-center gap-1.5 ml-1">
-                {/* Facebook - Brand Color */}
                 <a
                   href="https://www.facebook.com/people/Goga-Stainless/pfbid0Gvrp5aoXa6ntZxKXTimAgXH1i7BANE1wW2CNgK3nxBWSEWnAun88M1DQa8vPzT53l/?mibextid=ZbWKwL"
                   target="_blank"
@@ -179,7 +173,6 @@ export default function Navbar() {
                 >
                   <FaFacebookF className="text-[11px] text-white" />
                 </a>
-                {/* WhatsApp - Brand Color */}
                 <a
                   href="https://wa.me/918452828260"
                   target="_blank"
@@ -189,7 +182,6 @@ export default function Navbar() {
                 >
                   <FaWhatsapp className="text-[13px] text-white" />
                 </a>
-                {/* Instagram - Custom Gradient Colors */}
                 <a
                   href="https://www.instagram.com/goga_stainless/"
                   target="_blank"
@@ -204,14 +196,10 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* =========================================================
-          MAIN NAVIGATION
-        ========================================================= */}
+        {/* MAIN NAVIGATION */}
         <div className="relative bg-white h-[var(--navbar-main-height)]">
           <div className="relative w-full h-full flex items-stretch px-0">
-            {/* =========================================================
-              LOGO SECTION
-            ========================================================= */}
+            {/* LOGO SECTION */}
             <div className="shrink-0 pl-4 sm:pl-6 lg:pl-8 py-1 flex items-center relative z-10">
               <Link
                 to="/"
@@ -238,11 +226,8 @@ export default function Navbar() {
               </Link>
             </div>
 
-            {/* =========================================================
-              DESKTOP NAVIGATION
-            ========================================================= */}
+            {/* DESKTOP NAVIGATION */}
             <div className="hidden lg:flex flex-1 items-stretch relative ml-2">
-              {/* Blue Background with Diagonal Cut */}
               <div
                 className="absolute inset-0 bg-[#173F52]"
                 style={{
@@ -250,7 +235,6 @@ export default function Navbar() {
                 }}
               />
 
-              {/* Navigation Links */}
               <div className="flex-1 flex items-center justify-center pl-10 relative z-10">
                 <div className="flex items-center gap-0.5 xl:gap-1">
                   <NavLink
@@ -312,7 +296,6 @@ export default function Navbar() {
                 </div>
               </div>
 
-              {/* Enquiry Button */}
               <div className="flex items-center px-4 relative z-10 flex-shrink-0">
                 <Link
                   to="/contact"
@@ -323,9 +306,7 @@ export default function Navbar() {
               </div>
             </div>
 
-            {/* =========================================================
-              MOBILE TOGGLE BUTTON
-            ========================================================= */}
+            {/* MOBILE TOGGLE BUTTON */}
             <div className="lg:hidden ml-auto flex items-center px-3 relative z-10">
               <button
                 onClick={() => setMobileMenu(!mobileMenu)}
@@ -338,9 +319,7 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* =========================================================
-          MOBILE MENU DROPDOWN
-        ========================================================= */}
+        {/* MOBILE MENU DROPDOWN */}
         {mobileMenu && (
           <div className="lg:hidden absolute top-[var(--navbar-main-height)] left-0 w-full bg-white border-t border-slate-200 shadow-2xl max-h-[calc(100vh-var(--navbar-main-height))] overflow-y-auto z-50">
             <div className="px-3 py-2">
@@ -370,7 +349,7 @@ export default function Navbar() {
               {renderMobileSection("Products", "products", products)}
               {renderMobileSection(
                 "Materials",
-                "products",
+                "materials",
                 materialDropdownData,
               )}
               {renderMobileSection("Dimensions", "dimensions", dimensions)}
@@ -403,7 +382,6 @@ export default function Navbar() {
                 SEND ENQUIRY
               </Link>
 
-              {/* Mobile Social Icons */}
               <div className="flex items-center justify-center gap-3 mt-3 pt-3 border-t border-slate-200">
                 <a
                   href="https://www.facebook.com/people/Goga-Stainless/pfbid0Gvrp5aoXa6ntZxKXTimAgXH1i7BANE1wW2CNgK3nxBWSEWnAun88M1DQa8vPzT53l/?mibextid=ZbWKwL"
@@ -434,7 +412,6 @@ export default function Navbar() {
                 </a>
               </div>
 
-              {/* Mobile Contact Info */}
               <div className="mt-3 pt-3 border-t border-slate-200 text-center text-xs text-slate-600">
                 <a
                   href="tel:+918452828260"

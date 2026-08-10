@@ -12,7 +12,7 @@ const MaterialCategory = () => {
 
   if (!material) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gray-50 pt-[10%]">
+      <div className="min-h-screen flex items-center justify-center bg-gray-50 ">
         <div className="text-center max-w-md p-8 bg-white rounded-2xl shadow-lg">
           <div className="w-16 h-16 bg-red-50 rounded-full flex items-center justify-center mx-auto mb-4">
             <svg
@@ -51,10 +51,10 @@ const MaterialCategory = () => {
   const materialName = material.name;
 
   return (
-    <section className="bg-gray-50 min-h-screen pt-[10%]">
+    <section className="bg-gray-50 min-h-screen">
       {/* Hero Banner - Premium */}
       <div
-        className="relative h-44 sm:h-56 md:h-72 lg:h-80 bg-cover bg-center"
+        className="relative h-75 sm:h-56 md:h-72 lg:h-150 bg-cover bg-center"
         style={{ backgroundImage: `url(${bannerIndustrial})` }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-[#173F52]/90 to-[#173F52]/70"></div>

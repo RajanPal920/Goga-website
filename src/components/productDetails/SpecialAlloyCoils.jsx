@@ -458,7 +458,7 @@ const SpecialAlloyCoils = () => {
       {/* HERO BANNER */}
       {/* =============================== */}
       <div
-        className="relative h-56 sm:h-64 md:h-80 bg-cover bg-center"
+        className="relative h-90 sm:h-64 md:h-80 bg-cover bg-center"
         style={{
           backgroundImage: `url(${bannerImage})`,
         }}
