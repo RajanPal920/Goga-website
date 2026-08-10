@@ -4,7 +4,7 @@ import { useParams, Link } from "react-router-dom";
 import { getProductComponent } from "../../components/productDetails";
 import productMaterials from "../../data/productMaterials";
 import bannerIndustrial from "../../assets/images/productImage/banner-industrial.webp";
-import contact from "../../data/contact"; // ← Add this import
+import contact from "../../data/contact";
 
 export default function ProductDetails() {
   const { category, slug } = useParams();
@@ -15,13 +15,13 @@ export default function ProductDetails() {
     return <ProductComponent />;
   }
 
-  // Find product from materials datagit init
+  // Find product from materials data
   const materials = productMaterials[category] ?? [];
   const product = materials.find((item) => item.slug === slug);
 
   if (product) {
     return (
-      <section className="bg-gray-50 min-h-screen">
+      <section className="bg-gray-50 min-h-screen pt-[10%]">
         {/* Hero Banner - Premium */}
         <div
           className="relative h-56 sm:h-64 md:h-72 lg:h-80 bg-cover bg-center"
@@ -202,7 +202,7 @@ export default function ProductDetails() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50">
+    <div className="min-h-screen flex items-center justify-center bg-gray-50 pt-[10%]">
       <div className="text-center max-w-md p-8 bg-white rounded-2xl shadow-lg">
         <div className="w-16 h-16 bg-red-50 rounded-full flex items-center justify-center mx-auto mb-4">
           <svg

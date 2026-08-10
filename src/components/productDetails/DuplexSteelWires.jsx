@@ -455,7 +455,7 @@ const DuplexSteelWires = () => {
   // ===============================
 
   return (
-    <div className="bg-gray-50 min-h-screen">
+    <div className="bg-gray-50 min-h-screen mt-[10%]">
       {/* =============================== */}
       {/* HERO BANNER */}
       {/* =============================== */}
@@ -903,4 +903,4 @@ const DuplexSteelWires = () => {
   );
 };
 
-export default DuplexSteelWires
+export default DuplexSteelWires;

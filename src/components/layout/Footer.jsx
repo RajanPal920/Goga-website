@@ -2,7 +2,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { MdCall, MdPhoneInTalk } from "react-icons/md";
-import { FaMapMarkerAlt, FaEnvelope, FaWhatsapp, FaShieldAlt } from "react-icons/fa";
+import {
+  FaMapMarkerAlt,
+  FaEnvelope,
+  FaWhatsapp,
+  FaShieldAlt,
+} from "react-icons/fa";
 import { HiChevronRight } from "react-icons/hi";
 import logoIcon from "../../assets/images/logo/goga-logo-icon.png";
 import logoWordmark from "../../assets/images/logo/goga-logo-wordmark.png";
@@ -28,7 +33,6 @@ const Footer = () => {
       {/* Main Footer */}
       <div className="max-w-9xl mx-auto px-6 lg:px-10 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-
           {/* Company Info */}
           <div className="space-y-4">
             <Link
@@ -65,9 +69,7 @@ const Footer = () => {
 
             <div className="text-xs text-slate-400 font-mono pt-1">
               GSTIN:{" "}
-              <span className="text-white font-semibold">
-                {company.gstin}
-              </span>
+              <span className="text-white font-semibold">{company.gstin}</span>
             </div>
           </div>
 
@@ -83,7 +85,6 @@ const Footer = () => {
                 { name: "About Us", path: "/about" },
                 { name: "Products", path: "/products" },
                 { name: "Materials", path: "/materials" },
-                { name: "Dimensions", path: "/dimensions/stainless-steel-pipes" },
                 { name: "Certificates", path: "/certificates" },
                 { name: "Gallery", path: "/gallery" },
                 { name: "Contact Us", path: "/contact" },
@@ -133,15 +134,19 @@ const Footer = () => {
                 <FaMapMarkerAlt className="w-5 h-5 text-[#D92B20] flex-shrink-0 mt-0.5" />
                 <span className="text-slate-300 text-sm leading-relaxed">
                   {company.address.plotNo}, {company.address.building},<br />
-                  {company.address.houseNo}, {company.address.floor}, {company.address.street},<br />
-                  {company.address.city}-{company.address.pincode}, {company.address.state}
+                  {company.address.houseNo}, {company.address.floor},{" "}
+                  {company.address.street},<br />
+                  {company.address.city}-{company.address.pincode},{" "}
+                  {company.address.state}
                 </span>
               </li>
 
               <li className="flex items-center gap-3">
                 <MdPhoneInTalk className="w-5 h-5 text-[#D92B20] flex-shrink-0" />
                 <div>
-                  <span className="text-xs text-slate-400 block">Telephone:</span>
+                  <span className="text-xs text-slate-400 block">
+                    Telephone:
+                  </span>
                   <a
                     href={`tel:${company.phone.telephoneRaw}`}
                     className="text-slate-200 hover:text-[#D92B20] transition-colors text-sm font-medium"
@@ -196,16 +201,27 @@ const Footer = () => {
       <div className="border-t border-white/10 bg-[#102F3D]">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 py-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs md:text-sm">
           <p className="text-slate-400 text-center md:text-left">
-            © {currentYear} <span className="text-white font-semibold">GOGA STAINLESS</span>. All rights reserved. | ISO 9001:2015 Certified Company
+            © {currentYear}{" "}
+            <span className="text-white font-semibold">GOGA STAINLESS</span>.
+            All rights reserved. | ISO 9001:2015 Certified Company
           </p>
           <div className="flex gap-6 text-slate-400">
-            <Link to="/about" className="hover:text-[#D92B20] transition-colors">
+            <Link
+              to="/about"
+              className="hover:text-[#D92B20] transition-colors"
+            >
               About
             </Link>
-            <Link to="/products" className="hover:text-[#D92B20] transition-colors">
+            <Link
+              to="/products"
+              className="hover:text-[#D92B20] transition-colors"
+            >
               Products
             </Link>
-            <Link to="/contact" className="hover:text-[#D92B20] transition-colors">
+            <Link
+              to="/contact"
+              className="hover:text-[#D92B20] transition-colors"
+            >
               Contact
             </Link>
           </div>

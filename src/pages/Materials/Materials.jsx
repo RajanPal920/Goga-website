@@ -6,7 +6,7 @@ import bannerIndustrial from "../../assets/images/productImage/banner-industrial
 
 const Materials = () => {
   return (
-    <section className="bg-gray-50 min-h-screen">
+    <section className="bg-gray-50 min-h-screen pt-[10%]">
       {/* Hero Banner - Premium */}
       <div
         className="relative h-56 sm:h-64 md:h-80 lg:h-96 bg-cover bg-center"
@@ -45,7 +45,7 @@ const Materials = () => {
       </div>
 
       {/* Materials Grid - Premium */}
-      <div className="max-w-7xl mx-auto px-5 lg:px-8 py-16 ">
+      <div className="max-w-7xl mx-auto px-5 lg:px-8 py-16">
         <div className="flex items-center justify-between mb-10">
           <div>
             <h2 className="text-2xl sm:text-3xl font-bold text-[#173F52]">

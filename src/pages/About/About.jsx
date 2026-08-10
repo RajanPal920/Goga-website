@@ -28,20 +28,16 @@ const About = () => {
       {/* HERO SECTION - IMAGE ONLY */}
       {/* =============================== */}
       <section
-        className="relative w-full overflow-hidden bg-[#102F3D]"
+        className="relative w-full max-w-full overflow-hidden h-[calc(100vw*0.417)] md:h-[calc(100vh-var(--navbar-total-height))]"
         style={{
-          aspectRatio: "1415/570",
           marginTop: "var(--navbar-total-height)",
         }}
       >
-        {/* Background Image */}
-        <div className="absolute inset-0">
-          <img
-            src={heroBg}
-            alt="GOGA STAINLESS Hero Background"
-            className="w-full h-full object-cover object-center"
-          />
-        </div>
+        <img
+          src={heroBg}
+          alt="GOGA STAINLESS Hero Background"
+          className="absolute inset-0 w-full h-full object-contain md:object-cover object-center select-none"
+        />
       </section>
 
       {/* =============================== */}

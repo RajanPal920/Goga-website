@@ -14,7 +14,7 @@ const ProductMaterials = () => {
 
   if (isCustomCategory) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
+      <div className="min-h-screen flex items-center justify-center pt-[10%]">
         <div className="text-center">
           <p className="text-gray-600">Loading...</p>
         </div>
@@ -32,7 +32,7 @@ const ProductMaterials = () => {
 
   if (!materials.length) {
     return (
-      <section className="min-h-screen flex items-center justify-center">
+      <section className="min-h-screen flex items-center justify-center pt-[10%]">
         <div className="text-center">
           <h1 className="text-3xl font-bold text-red-600 mb-4">
             Materials Not Found
@@ -50,7 +50,7 @@ const ProductMaterials = () => {
   }
 
   return (
-    <section className="bg-gray-50 min-h-screen">
+    <section className="bg-gray-50 min-h-screen pt-[10%]">
       {/* Hero Banner - Premium */}
       <div
         className="relative h-44 sm:h-56 md:h-72 lg:h-80 bg-cover bg-center"

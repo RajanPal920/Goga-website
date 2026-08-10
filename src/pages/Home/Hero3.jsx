@@ -11,6 +11,8 @@ import {
 } from "react-icons/fa";
 import company from "../../config/company";
 
+import downloadIcon from "../../assets/images/logo/download.jpg";
+
 // ✅ FIXED IMPORTS: Correctly point to PDFs inside the /public folder
 // In Vite/React, files in /public are accessed directly from the root '/'
 const isoCertificate = "/certificates/iso-9001.pdf";
@@ -90,8 +92,9 @@ const Hero3 = () => {
       {/* LEFT SIDE - CONTENT & STATS */}
       <div
         ref={leftRef}
-        className={`w-full lg:w-[58%] flex flex-col justify-between px-6 py-8 sm:px-8 sm:py-10 md:px-12 md:py-12 lg:px-16 lg:py-16 xl:px-20 xl:py-20 z-10 transition-all duration-1000 ease-out ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-16"
-          }`}
+        className={`w-full lg:w-[58%] flex flex-col justify-between px-6 py-8 sm:px-8 sm:py-10 md:px-12 md:py-12 lg:px-16 lg:py-16 xl:px-20 xl:py-20 z-10 transition-all duration-1000 ease-out ${
+          isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-16"
+        }`}
       >
         {/* Top Tagline */}
         <div className="flex items-center gap-3 mb-6">
@@ -112,10 +115,11 @@ const Hero3 = () => {
         {/* Body Text */}
         <div className="max-w-2xl mb-10">
           <p className="text-slate-700 text-sm md:text-base leading-relaxed uppercase font-medium">
-            GOGA STAINLESS CONSTRUCTS AND SUPPLIES HIGH-YIELD STAINLESS STEEL AND
-            INDUSTRIAL RAW MATERIAL ARCHITECTURES ENGINEERED EXCLUSIVELY FOR HIGH-PRESSURE,
-            SEVERE-TEMPERATURE ENVIRONMENTS. WE GUARANTEE COMPLETE DOCUMENTATION AND
-            TRACABILITY ACROSS GLOBAL DISTRIBUTION NETWORKS.
+            GOGA STAINLESS CONSTRUCTS AND SUPPLIES HIGH-YIELD STAINLESS STEEL
+            AND INDUSTRIAL RAW MATERIAL ARCHITECTURES ENGINEERED EXCLUSIVELY FOR
+            HIGH-PRESSURE, SEVERE-TEMPERATURE ENVIRONMENTS. WE GUARANTEE
+            COMPLETE DOCUMENTATION AND TRACABILITY ACROSS GLOBAL DISTRIBUTION
+            NETWORKS.
           </p>
         </div>
 
@@ -166,8 +170,20 @@ const Hero3 = () => {
       {/* RIGHT SIDE - DARK PANEL */}
       <div
         ref={rightRef}
-        className={`w-full lg:w-[42%] bg-[#173F52] px-6 py-8 sm:px-8 sm:py-10 md:px-12 md:py-12 lg:px-16 lg:py-16 flex flex-col justify-between relative min-h-[500px] lg:min-h-screen transition-all duration-1000 ease-out delay-200 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-16"
-          }`}
+        className={`w-full lg:w-[41%] bg-[#173F52] mt-30
+  px-9 py-6
+  sm:px-6 sm:py-8
+  md:px-8 md:py-12
+  lg:px-10 lg:py-8
+  xl:px-12 xl:py-15
+  flex flex-col justify-around relative
+  h-[500px]
+  sm:h-[560px]
+  md:h-[580px]
+  lg:h-[500px]
+  xl:h-[520px]
+  transition-all duration-1000 ease-out delay-200
+  ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-16"}`}
       >
         {/* Decorative Elements */}
         <div className="absolute top-6 left-6 w-12 h-12 border-t-2 border-l-2 border-[#D92B20]/40"></div>
@@ -176,7 +192,7 @@ const Hero3 = () => {
 
         {/* GST Certificate Badge Section */}
         <div className="mt-6 flex items-start gap-4 relative z-10">
-          <div className="border border-[#D92B20]/40 p-3 text-[#D92B20] flex items-center justify-center w-12 h-12 rounded-xl bg-[#D92B20]/20">
+          <div className="border border-[#D92B20]/40 p-3 text-[#D92B20] flex items-start justify-start w-12 h-12 rounded-xl bg-[#D92B20]/20">
             <FaIndustry className="w-5 h-5 text-white" />
           </div>
           <div>
@@ -192,51 +208,34 @@ const Hero3 = () => {
 
         {/* Certificate Description */}
         <p className="text-slate-200 text-xs md:text-sm leading-relaxed my-6 max-w-md relative z-10 uppercase font-medium">
-          VERIFIES GOGA STAINLESS VALID GOODS AND SERVICES TAX REGISTRATION ({company.gstin}), ENSURING COMPLETE TAX COMPLIANCE AND TRANSPARENT BUSINESS OPERATIONS ACROSS ALL DOMESTIC AND INTERNATIONAL TRANSACTIONS.
+          VERIFIES GOGA STAINLESS VALID GOODS AND SERVICES TAX REGISTRATION (
+          {company.gstin}), ENSURING COMPLETE TAX COMPLIANCE AND TRANSPARENT
+          BUSINESS OPERATIONS ACROSS ALL DOMESTIC AND INTERNATIONAL
+          TRANSACTIONS.
         </p>
 
         {/* View Certificate Button */}
-        <div className="w-full max-w-md bg-[#D92B20] hover:bg-[#B91F17] transition text-white flex items-center justify-between rounded-xl shadow-lg shadow-[#D92B20]/30 mb-3 cursor-pointer group relative z-10">
-          <div
-            className="p-4 md:p-5 flex flex-col text-left flex-1"
-            onClick={handleViewCertificate}
-          >
-            <span className="text-xs font-bold tracking-wider uppercase flex items-center gap-2">
-              <FaFileDownload className="w-3.5 h-3.5" />
-              VIEW GST CERTIFICATE
-            </span>
-            <span className="text-[10px] text-white/80 mt-0.5 font-medium uppercase">
-              PDF FORMAT • OFFICIAL TAX REGISTRATION
-            </span>
-          </div>
-          <div
-            className="bg-white/20 p-5 md:p-6 flex items-center justify-center group-hover:bg-white/30 transition rounded-r-xl"
-            onClick={handleViewCertificate}
-          >
-            <span className="text-lg font-bold">↗</span>
-          </div>
-        </div>
-
-        {/* Download Button */}
-        <div className="w-full max-w-md bg-[#102F3D] hover:bg-[#173F52] transition text-white flex items-center justify-between rounded-xl border border-[#D92B20]/40 shadow-lg mb-8 cursor-pointer group relative z-10">
-          <div
-            className="p-4 md:p-5 flex flex-col text-left flex-1"
-            onClick={handleDownload}
-          >
-            <span className="text-xs font-bold tracking-wider uppercase flex items-center gap-2">
-              <FaFileDownload className="w-3.5 h-3.5 text-[#D92B20]" />
-              DOWNLOAD PDF
-            </span>
-            <span className="text-[10px] text-slate-300 mt-0.5 font-medium uppercase">
-              SAVE TO DEVICE • INSTANT DOWNLOAD
-            </span>
-          </div>
-          <div
-            className="bg-white/10 p-5 md:p-6 flex items-center justify-center group-hover:bg-white/20 transition rounded-r-xl"
-            onClick={handleDownload}
-          >
-            <span className="text-lg font-bold">↓</span>
-          </div>
+        {/* Download Image - Replaces View GST Certificate Button */}
+        <div
+          className="w-full relative z-10 cursor-pointer group flex justify-start items-start pb-1 pl-[-10px]"
+          onClick={handleDownload}
+        >
+          <img
+            src={downloadIcon}
+            alt="Download GST Certificate"
+            className="
+      block
+      w-auto
+      h-[100px]
+      sm:h-[90px]
+      md:h-[110px]
+      object-contain
+      object-left
+      transition-transform
+      duration-300
+      group-hover:scale-[1.02]
+    "
+          />
         </div>
 
         {/* Execute Verification Action */}

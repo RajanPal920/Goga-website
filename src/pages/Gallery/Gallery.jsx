@@ -25,7 +25,7 @@ const Gallery = () => {
       : products.filter((p) => p.category === activeFilter);
 
   return (
-    <section className="bg-gray-50 min-h-screen mt-10">
+    <section className="bg-gray-50 min-h-screen pt-[10%]">
       {/* Hero Banner */}
       <div
         className="relative h-44 sm:h-56 md:h-72 lg:h-80 bg-cover bg-center"
@@ -44,7 +44,8 @@ const Gallery = () => {
               Product <span className="text-[#D92B20]">Gallery</span>
             </h1>
             <p className="text-lg text-slate-200 mt-3 max-w-2xl font-medium">
-              Explore our comprehensive range of stainless steel, pipe fittings, flanges, sheets, and industrial raw materials.
+              Explore our comprehensive range of stainless steel, pipe fittings,
+              flanges, sheets, and industrial raw materials.
             </p>
             <div className="flex items-center gap-4 mt-4">
               <span className="inline-flex items-center gap-2 text-white/90 text-sm font-semibold">

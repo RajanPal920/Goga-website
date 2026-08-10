@@ -43,10 +43,11 @@ const Hero1 = () => {
 
   return (
     <section
-      className="relative w-full overflow-hidden bg-[#102F3D] mt-10"
+      className="relative w-full max-w-full overflow-hidden bg-[#102F3D] md:!bg-transparent h-[calc(100vw*0.417)] md:h-[calc(102vh-var(--navbar-total-height))]"
       style={{
-        aspectRatio: "1415/575",
         marginTop: "var(--navbar-total-height)",
+        overflowX: "hidden",
+        backgroundColor: "transparent",
       }}
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
@@ -56,31 +57,27 @@ const Hero1 = () => {
         <div
           key={index}
           className={`
-        absolute
-        inset-0
-        w-full
-        h-full
-        transition-all
-        duration-1000
-        ease-in-out
-        ${
-          index === current
-            ? "opacity-100 scale-100 z-10"
-            : "opacity-0 scale-[1.02] z-0"
-        }
-      `}
+            absolute
+            inset-0
+            flex
+            items-center
+            justify-center
+            w-full
+            h-full
+            transition-all
+            duration-1000
+            ease-in-out
+            ${
+              index === current
+                ? "opacity-100 scale-100 z-10"
+                : "opacity-0 scale-95 z-0"
+            }
+          `}
         >
           <img
             src={slide.image}
             alt={`Goga Stainless Hero ${index + 1}`}
-            className="
-          block
-          w-full
-          h-full
-          object-cover
-          object-center
-          select-none
-        "
+            className="absolute inset-0 w-full h-full object-contain md:object-cover object-center select-none"
             loading={index === 0 ? "eager" : "lazy"}
           />
         </div>
@@ -90,41 +87,41 @@ const Hero1 = () => {
       <button
         onClick={prevSlide}
         className="
-      absolute
-      left-4
-      md:left-6
-      top-1/2
-      -translate-y-1/2
-      z-30
+          absolute
+          left-4
+          md:left-6
+          top-1/2
+          -translate-y-1/2
+          z-30
 
-      flex
-      items-center
-      justify-center
+          flex
+          items-center
+          justify-center
 
-      w-10
-      h-10
-      md:w-12
-      md:h-12
+          w-10
+          h-10
+          md:w-12
+          md:h-12
 
-      rounded-full
+          rounded-full
 
-      bg-black/20
-      hover:bg-[#D92B20]
+          bg-black/20
+          hover:bg-[#D92B20]
 
-      backdrop-blur-md
+          backdrop-blur-md
 
-      border
-      border-white/30
+          border
+          border-white/30
 
-      text-white
+          text-white
 
-      shadow-lg
+          shadow-lg
 
-      hover:scale-110
+          hover:scale-110
 
-      transition-all
-      duration-300
-    "
+          transition-all
+          duration-300
+        "
         aria-label="Previous slide"
       >
         <svg
@@ -146,41 +143,41 @@ const Hero1 = () => {
       <button
         onClick={nextSlide}
         className="
-      absolute
-      right-4
-      md:right-6
-      top-1/2
-      -translate-y-1/2
-      z-30
+          absolute
+          right-4
+          md:right-6
+          top-1/2
+          -translate-y-1/2
+          z-30
 
-      flex
-      items-center
-      justify-center
+          flex
+          items-center
+          justify-center
 
-      w-10
-      h-10
-      md:w-12
-      md:h-12
+          w-10
+          h-10
+          md:w-12
+          md:h-12
 
-      rounded-full
+          rounded-full
 
-      bg-black/20
-      hover:bg-[#D92B20]
+          bg-black/20
+          hover:bg-[#D92B20]
 
-      backdrop-blur-md
+          backdrop-blur-md
 
-      border
-      border-white/30
+          border
+          border-white/30
 
-      text-white
+          text-white
 
-      shadow-lg
+          shadow-lg
 
-      hover:scale-110
+          hover:scale-110
 
-      transition-all
-      duration-300
-    "
+          transition-all
+          duration-300
+        "
         aria-label="Next slide"
       >
         <svg
@@ -201,35 +198,35 @@ const Hero1 = () => {
       {/* ================= SLIDE INDICATORS ================= */}
       <div
         className="
-      absolute
-      bottom-5
-      md:bottom-7
-      left-1/2
-      -translate-x-1/2
-      z-30
+          absolute
+          bottom-5
+          md:bottom-7
+          left-1/2
+          -translate-x-1/2
+          z-30
 
-      flex
-      items-center
-      gap-2
-    "
+          flex
+          items-center
+          gap-2
+        "
       >
         {slides.map((_, index) => (
           <button
             key={index}
             onClick={() => goToSlide(index)}
             className={`
-          h-2
-          rounded-full
-          cursor-pointer
-          transition-all
-          duration-300
+              h-2
+              rounded-full
+              cursor-pointer
+              transition-all
+              duration-300
 
-          ${
-            index === current
-              ? "w-8 md:w-10 bg-[#D92B20]"
-              : "w-2 bg-white/60 hover:bg-white"
-          }
-        `}
+              ${
+                index === current
+                  ? "w-8 md:w-10 bg-[#D92B20]"
+                  : "w-2 bg-white/60 hover:bg-white"
+              }
+            `}
             aria-label={`Go to slide ${index + 1}`}
           />
         ))}

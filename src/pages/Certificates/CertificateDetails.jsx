@@ -22,7 +22,7 @@ const CertificateDetails = () => {
 
   if (!certificate) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-slate-50">
+      <div className="min-h-screen flex items-center justify-center bg-slate-50 pt-[10%]">
         <div className="text-center max-w-md p-8 bg-white rounded-2xl shadow-lg border border-slate-200">
           <div className="w-16 h-16 bg-red-50 rounded-full flex items-center justify-center mx-auto mb-4">
             <ShieldCheck className="w-8 h-8 text-[#D92B20]" />
@@ -46,7 +46,7 @@ const CertificateDetails = () => {
   }
 
   return (
-    <section className="min-h-screen bg-slate-50">
+    <section className="min-h-screen bg-slate-50 pt-[10%]">
       {/* HERO - Premium */}
       <div className="relative overflow-hidden bg-gradient-to-br from-[#102F3D] via-[#173F52] to-[#102F3D] pt-24 pb-32">
         {/* Decorative Elements */}

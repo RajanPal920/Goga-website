@@ -52,7 +52,7 @@ const ProductList = () => {
 
   if (category && allProducts.length === 0) {
     return (
-      <section className="bg-gray-50 min-h-screen flex items-center justify-center">
+      <section className="bg-gray-50 min-h-screen flex items-center justify-center pt-[10%]">
         <div className="text-center max-w-md p-8 bg-white rounded-2xl shadow-lg border border-gray-100">
           <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
             <Package className="w-8 h-8 text-gray-400" />
@@ -75,7 +75,7 @@ const ProductList = () => {
   }
 
   return (
-    <section className="bg-gray-50 min-h-screen">
+    <section className="bg-gray-50 min-h-screen pt-[10%]">
       {/* Hero Banner */}
       <div
         className="relative h-44 sm:h-56 md:h-72 lg:h-80 bg-cover bg-center"

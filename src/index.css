@@ -26,8 +26,8 @@
   /* =========================
      NAVBAR HEIGHT
      ========================= */
-  --navbar-top-height: 0vh; /* top contact bar (hidden on mobile) */
-  --navbar-main-height: 8vh; /* main navigation row */
+  --navbar-top-height: 5vh; /* top contact bar (hidden on mobile) */
+  --navbar-main-height: 10vh; /* main navigation row */
   --navbar-total-height: calc(
     var(--navbar-top-height) + var(--navbar-main-height)
   );
@@ -38,8 +38,8 @@
    ========================= */
 @media (min-width: 1024px) {
   :root {
-    --navbar-top-height: 4vh;
-    --navbar-main-height: 12vh;
+    --navbar-top-height: 5.5vh;
+    --navbar-main-height: 16vh;
     /* --navbar-total-height recalculates automatically: 16vh */
   }
 }

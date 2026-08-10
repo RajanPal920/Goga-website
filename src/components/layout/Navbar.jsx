@@ -169,30 +169,33 @@ export default function Navbar() {
                 <span>gogastainless@gmail.com</span>
               </a>
               <div className="flex items-center gap-1.5 ml-1">
+                {/* Facebook - Brand Color */}
                 <a
                   href="https://www.facebook.com/people/Goga-Stainless/pfbid0Gvrp5aoXa6ntZxKXTimAgXH1i7BANE1wW2CNgK3nxBWSEWnAun88M1DQa8vPzT53l/?mibextid=ZbWKwL"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Facebook"
-                  className="w-7 h-7 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-all"
+                  className="w-7 h-7 rounded-full bg-[#1877F2] hover:bg-[#1877F2]/80 flex items-center justify-center transition-all shadow-sm"
                 >
                   <FaFacebookF className="text-[11px] text-white" />
                 </a>
+                {/* WhatsApp - Brand Color */}
                 <a
                   href="https://wa.me/918452828260"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="WhatsApp"
-                  className="w-7 h-7 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-all"
+                  className="w-7 h-7 rounded-full bg-[#25D366] hover:bg-[#25D366]/80 flex items-center justify-center transition-all shadow-sm"
                 >
                   <FaWhatsapp className="text-[13px] text-white" />
                 </a>
+                {/* Instagram - Custom Gradient Colors */}
                 <a
                   href="https://www.instagram.com/goga_stainless/"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Instagram"
-                  className="w-7 h-7 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-all"
+                  className="w-7 h-7 rounded-full bg-gradient-to-br from-[#e9e20c] via-[#d220ac] to-[#8d0813] flex items-center justify-center hover:opacity-90 transition-all shadow-sm"
                 >
                   <FaInstagram className="text-[12px] text-white" />
                 </a>
@@ -204,7 +207,7 @@ export default function Navbar() {
         {/* =========================================================
           MAIN NAVIGATION
         ========================================================= */}
-       <div className="relative bg-white h-[var(--navbar-main-height)]">
+        <div className="relative bg-white h-[var(--navbar-main-height)]">
           <div className="relative w-full h-full flex items-stretch px-0">
             {/* =========================================================
               LOGO SECTION
@@ -228,7 +231,7 @@ export default function Navbar() {
                     />
                   </div>
                 </div>
-                <div className="mt-0.5 ml-[52px] sm:ml-[60px] lg:ml-[82px] text-[6px] sm:text-[7px] lg:text-[9px] leading-none uppercase tracking-[0.15em] font-semibold text-[#1A3A5C] whitespace-nowrap">
+                <div className="mt-0.5 ml-[52px] sm:ml-[60px] lg:ml-[90px] text-[6px] sm:text-[7px] lg:text-[15px] leading-none uppercase tracking-[0.15em] font-bold text-[#1A3A5C] whitespace-nowrap">
                   {company.certification ||
                     "AN ISO 9001:2015 CERTIFIED COMPANY"}
                 </div>
@@ -253,7 +256,7 @@ export default function Navbar() {
                   <NavLink
                     to="/"
                     className={({ isActive }) =>
-                      `relative px-2.5 xl:px-3.5 py-6 text-[13px] xl:text-sm font-medium whitespace-nowrap transition-colors text-white/90 hover:text-white ${
+                      `relative px-2.5 xl:px-3.5 py-6 text-[13px] xl:text-sm font-bold whitespace-nowrap transition-colors text-white/90 hover:text-white ${
                         isActive
                           ? "after:scale-x-100 text-white"
                           : "after:scale-x-0 hover:after:scale-x-100"

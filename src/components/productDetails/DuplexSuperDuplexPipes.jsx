@@ -10,10 +10,7 @@ import WhatsAppIcon from "../../assets/images/icons/WhatsAppIcon.jsx";
 import CallIcon from "../../assets/images/icons/CallIcon.jsx";
 
 // Import contact helpers (same as other components)
-import {
-  getWhatsAppUrl,
-  getTelUrl,
-} from "../../utils/contactHelpers";
+import { getWhatsAppUrl, getTelUrl } from "../../utils/contactHelpers";
 
 // Sample image imports (replace with your actual image paths)
 import productImage from "../../assets/images/productImage/pipes.webp";
@@ -627,7 +624,7 @@ const DuplexSuperDuplexPipes = () => {
   // ===============================
 
   return (
-    <div className="bg-gray-50 min-h-screen">
+    <div className="bg-gray-50 min-h-screen mt-[10%]">
       {/* =============================== */}
       {/* HERO BANNER */}
       {/* =============================== */}

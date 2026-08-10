@@ -87,7 +87,7 @@ const Hero2 = () => {
                 <img
                   src={pipeline}
                   alt="Industrial Stainless Steel Pipeline"
-                  className="w-full h-auto max-h-[450px] object-contain"
+                  className="w-full h-auto max-h-[500px] object-contain"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-white/10 to-transparent"></div>
               </div>

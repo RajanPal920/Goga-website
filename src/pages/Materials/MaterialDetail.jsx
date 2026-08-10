@@ -4,6 +4,7 @@ import { useParams, Link } from "react-router-dom";
 import { getProductComponent } from "../../components/productDetails";
 import materials from "../../data/materials";
 import bannerIndustrial from "../../assets/images/productImage/banner-industrial.webp";
+import contact from "../../data/contact";
 
 const MaterialDetail = () => {
   const { slug, itemSlug } = useParams();
@@ -19,7 +20,7 @@ const MaterialDetail = () => {
 
   if (!material) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
+      <div className="min-h-screen flex items-center justify-center pt-[10%]">
         <div className="text-center">
           <h1 className="text-3xl font-bold text-red-600 mb-4">
             Material Not Found
@@ -40,7 +41,7 @@ const MaterialDetail = () => {
 
   if (!item) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
+      <div className="min-h-screen flex items-center justify-center pt-[10%]">
         <div className="text-center">
           <h1 className="text-3xl font-bold text-red-600 mb-4">
             Product Not Found
@@ -58,7 +59,7 @@ const MaterialDetail = () => {
 
   // Generic product detail page (fallback)
   return (
-    <section className="bg-gray-50 min-h-screen  ">
+    <section className="bg-gray-50 min-h-screen pt-[10%]">
       {/* Hero Banner */}
       <div
         className="relative h-56 sm:h-64 md:h-72 lg:h-80 bg-cover bg-center"

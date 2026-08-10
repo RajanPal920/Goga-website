@@ -21,7 +21,7 @@ const DimensionViewer = () => {
 
   if (!dimension) {
     return (
-      <div className="min-h-[80vh] flex items-center justify-center bg-slate-50">
+      <div className="min-h-[80vh] flex items-center justify-center bg-slate-50 pt-[10%]">
         <div className="text-center max-w-md p-8 bg-white rounded-2xl shadow-lg border border-slate-200">
           <div className="w-16 h-16 bg-red-50 rounded-full flex items-center justify-center mx-auto mb-4">
             <Ruler className="w-8 h-8 text-[#D92B20]" />
@@ -49,7 +49,7 @@ const DimensionViewer = () => {
   };
 
   return (
-    <div className="h-[calc(100vh-80px)] bg-slate-50 flex flex-col overflow-hidden">
+    <div className="h-[calc(100vh-80px)] bg-slate-50 flex flex-col overflow-hidden pt-[10%]">
       {/* Header */}
       <div className="bg-[#173F52] border-b border-[#102F3D] flex-shrink-0 shadow-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -134,7 +134,9 @@ const DimensionViewer = () => {
               <p className="text-slate-600 text-sm font-semibold">
                 Loading dimension chart...
               </p>
-              <p className="text-slate-400 text-xs mt-2 font-medium">Please wait...</p>
+              <p className="text-slate-400 text-xs mt-2 font-medium">
+                Please wait...
+              </p>
             </div>
           </div>
         )}
@@ -166,7 +168,9 @@ const DimensionViewer = () => {
           <div className="flex items-center gap-3">
             <span className="inline-flex items-center gap-1.5">
               <span className="w-2 h-2 bg-emerald-500 rounded-full"></span>
-              <span className="font-semibold text-emerald-700">Verified Specification</span>
+              <span className="font-semibold text-emerald-700">
+                Verified Specification
+              </span>
             </span>
             <Link
               to="/"

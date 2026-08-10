@@ -15,7 +15,7 @@ import bannerIndustrial from "../../assets/images/productImage/banner-industrial
 
 const Certificates = () => {
   return (
-    <section className="w-full bg-gray-50 min-h-screen">
+    <section className="w-full bg-gray-50 min-h-screen pt-[10%]">
       {/* Hero Banner */}
       <div
         className="relative h-44 sm:h-56 md:h-72 lg:h-80 bg-cover bg-center"
@@ -34,7 +34,9 @@ const Certificates = () => {
               Our <span className="text-[#D92B20]">Certifications</span>
             </h1>
             <p className="text-lg text-slate-200 mt-3 max-w-2xl font-medium">
-              GOGA STAINLESS is an ISO 9001:2015 certified company committed to maintaining the highest standards of quality, compliance and customer satisfaction.
+              GOGA STAINLESS is an ISO 9001:2015 certified company committed to
+              maintaining the highest standards of quality, compliance and
+              customer satisfaction.
             </p>
           </div>
         </div>
@@ -143,7 +145,8 @@ const Certificates = () => {
         <div className="text-center mt-16">
           <div className="inline-flex flex-wrap items-center justify-center gap-4 bg-white rounded-full px-6 py-3 shadow-md border border-slate-200">
             <span className="text-sm text-slate-700 font-semibold">
-              Need assistance or specific test certificates for GOGA STAINLESS products?
+              Need assistance or specific test certificates for GOGA STAINLESS
+              products?
             </span>
             <Link
               to="/contact"
