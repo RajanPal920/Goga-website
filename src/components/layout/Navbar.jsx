@@ -244,7 +244,7 @@ export default function Navbar() {
             <div className="hidden lg:flex flex-1 items-stretch relative ml-2">
               {/* Blue Background with Diagonal Cut */}
               <div
-                className="absolute inset-0 bg-[#1A3A5C]"
+                className="absolute inset-0 bg-[#173F52]"
                 style={{
                   clipPath: "polygon(0 0, 100% 0, 100% 100%, 50px 100%, 0 0)",
                 }}

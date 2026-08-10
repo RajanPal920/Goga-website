@@ -12,6 +12,7 @@ import {
 import company from "../../config/company";
 
 import downloadIcon from "../../assets/images/logo/download.jpg";
+import icon from "../../assets/images/logo/down.jpg";
 
 // ✅ FIXED IMPORTS: Correctly point to PDFs inside the /public folder
 // In Vite/React, files in /public are accessed directly from the root '/'
@@ -167,23 +168,23 @@ const Hero3 = () => {
         </div>
       </div>
 
-      {/* RIGHT SIDE - DARK PANEL */}
+      {/* RIGHT SIDE - GST CERTIFICATE CARD */}
       <div
         ref={rightRef}
-        className={`w-full lg:w-[41%] bg-[#173F52] mt-30
-  px-9 py-6
-  sm:px-6 sm:py-8
-  md:px-8 md:py-12
-  lg:px-10 lg:py-8
-  xl:px-12 xl:py-15
-  flex flex-col justify-around relative
-  h-[500px]
-  sm:h-[560px]
-  md:h-[580px]
-  lg:h-[500px]
-  xl:h-[520px]
-  transition-all duration-1000 ease-out delay-200
-  ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-16"}`}
+        className={`w-full lg:w-[41%] bg-[#173F52] mt-6 md:mt-30
+          px-9 py-6
+          sm:px-6 sm:py-8
+          md:px-8 md:py-12
+          lg:px-10 lg:py-8
+          xl:px-12 xl:py-15
+          flex flex-col justify-around relative
+          h-auto
+          sm:h-[560px]
+          md:h-[580px]
+          lg:h-[500px]
+          xl:h-[560px]
+          transition-all duration-1000 ease-out delay-200
+          ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-16"}`}
       >
         {/* Decorative Elements */}
         <div className="absolute top-6 left-6 w-12 h-12 border-t-2 border-l-2 border-[#D92B20]/40"></div>
@@ -214,32 +215,47 @@ const Hero3 = () => {
           TRANSACTIONS.
         </p>
 
-        {/* View Certificate Button */}
-        {/* Download Image - Replaces View GST Certificate Button */}
-        <div
-          className="w-full relative z-10 cursor-pointer group flex justify-start items-start pb-1 pl-[-10px]"
-          onClick={handleDownload}
-        >
-          <img
-            src={downloadIcon}
-            alt="Download GST Certificate"
-            className="
-      block
-      w-auto
-      h-[100px]
-      sm:h-[90px]
-      md:h-[110px]
-      object-contain
-      object-left
-      transition-transform
-      duration-300
-      group-hover:scale-[1.02]
-    "
-          />
+        {/* Download Image - side-by-side on desktop, stacked on mobile */}
+        <div className="w-full flex flex-col md:flex-row md:items-start md:gap-4 gap-4 relative z-10 border-none">
+          <button
+            type="button"
+            onClick={handleDownload}
+            aria-label="Download ISO certificate"
+            className="w-full md:w-1/2 cursor-pointer group flex flex-col items-center justify-center h-[120px] md:h-[140px] bg-transparent rounded-md overflow-hidden border border-white/10 p-2"
+          >
+            <div className="flex items-center justify-center w-full h-[80px] md:h-[100px]">
+              <img
+                src={downloadIcon}
+                alt="Download iso Certificate"
+                className="max-w-full max-h-full object-contain transition-transform duration-300 group-hover:scale-[1.02]"
+              />
+            </div>
+            <span className="mt-2 text-xs font-semibold uppercase text-white/90">
+              ISO-Certificate
+            </span>
+          </button>
+
+          <button
+            type="button"
+            onClick={handleDownloadUdyam}
+            aria-label="Download Udyam certificate"
+            className="w-full md:w-1/2 cursor-pointer group flex flex-col items-center justify-center h-[120px] md:h-[140px] bg-transparent rounded-md overflow-hidden border border-white/10 p-2"
+          >
+            <div className="flex items-center justify-center w-full h-[80px] md:h-[100px]">
+              <img
+                src={icon}
+                alt="Download Udyam Certificate"
+                className="max-w-full max-h-full object-contain transition-transform duration-300 group-hover:scale-[1.02]"
+              />
+            </div>
+            <span className="mt-2 text-xs font-semibold uppercase text-white/90">
+              Udyam-Certificate
+            </span>
+          </button>
         </div>
 
         {/* Execute Verification Action */}
-        <div className="w-full border-t border-white/10 pt-6 mt-auto relative z-10">
+        <div className="w-full border-t border-white/10 pt-6 mt-6 relative z-10">
           <Link
             to="/certificates"
             className="text-[11px] tracking-[0.15em] font-extrabold text-white uppercase hover:text-[#D92B20] transition flex items-center gap-2 group"
