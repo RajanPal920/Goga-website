@@ -149,7 +149,7 @@ const Hero1 = () => {
 
           {/* ================= TEXT CONTENT ================= */}
           <div className="absolute inset-0 flex items-end justify-start px-2 sm:px-4 md:px-12 lg:px-20 pb-2 sm:pb-4 md:pb-12 lg:pb-16 z-20">
-            <div className="max-w-3xl w-full">
+            <div className="max-w-3xl w-full ">
               {/* Company Name with Line - Hidden on mobile, visible on desktop */}
               <div className="hidden md:flex items-center gap-1.5 sm:gap-2 md:gap-3 mb-1.5 sm:mb-2 md:mb-3">
                 <span className="w-6 sm:w-8 md:w-12 h-0.5 bg-[#E52713]"></span>
@@ -157,18 +157,19 @@ const Hero1 = () => {
                   {slide.tagline}
                 </span>
               </div>
-              {/* Title - Smaller on mobile, shifted 30% left */}
-              <h1 className="text-white font-black text-[10px] sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl leading-[1.1] uppercase -mt-4 sm:mt-0 ml-[12%] sm:ml-0">
+              {/* Title - Smaller on mobile, shifted up and left */}
+              {/* Title - Smaller on mobile, shifted up and left */}
+              <h1 className="text-white font-black text-[10px] sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl leading-[1.1] uppercase -mt-25 sm:mt-0 ml-[12%] sm:ml-0 mb-1 sm:mb-2 md:mb-3 lg:mb-4">
                 {slide.title}
               </h1>
 
-              {/* Subtitle - Smaller on mobile, shifted 30% left */}
-              <p className="text-slate-200 text-[8px] sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl mt-0.5 sm:mt-1.5 md:mt-2 lg:mt-3 max-w-2xl leading-relaxed ml-[12%] sm:ml-0">
+              {/* Subtitle - Smaller on mobile, shifted up and left */}
+              <p className="text-slate-200 text-[8px] sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl -mt-1 sm:mt-1.5 md:mt-2 lg:mt-3 max-w-2xl leading-relaxed ml-[12%] sm:ml-0 mb-1.5 sm:mb-2 md:mb-3 lg:mb-4">
                 {slide.subtitle}
               </p>
 
-              {/* Buttons - Smaller on mobile, shifted upward and left */}
-              <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4 lg:gap-5 mt-3 sm:mt-4 md:mt-5 lg:mt-6 ml-[10%] sm:ml-0 -mt-8 sm:mt-0">
+              {/* Buttons - Smaller on mobile, shifted up and left */}
+              <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4 lg:gap-5 mt-1 sm:mt-4 md:mt-5 lg:mt-6 ml-[10%] sm:ml-0 -mt-8 sm:mt-0">
                 <Link
                   to="/products"
                   className="bg-[#E52713] hover:bg-[#B91F17] text-white font-semibold px-4 sm:px-5 md:px-6 lg:px-8 py-2 sm:py-2.5 md:py-3 lg:py-3.5 rounded-lg sm:rounded-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-[#E52713]/25 flex items-center gap-1.5 sm:gap-2 md:gap-2.5 text-xs sm:text-sm md:text-base lg:text-lg"
