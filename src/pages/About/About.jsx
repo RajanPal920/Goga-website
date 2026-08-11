@@ -42,6 +42,7 @@ const About = () => {
           className="absolute inset-0 w-full h-full object-contain md:object-cover object-center select-none"
           loading="eager"
         />
+
         {/* ================= SAME OVERLAY ON MOBILE & DESKTOP ================= */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#173f52]/80 via-[#173f52]/40 to-transparent z-10"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-[#173f52]/40 via-transparent to-transparent z-10"></div>
@@ -51,66 +52,66 @@ const About = () => {
         <div className="absolute inset-x-0 bottom-0 h-[70%] bg-gradient-to-t from-[#173f52]/90 via-[#173f52]/40 to-transparent z-10"></div>
 
         {/* ================= TEXT CONTENT ================= */}
-        <div className="absolute inset-0 flex items-end justify-start px-3 sm:px-4 md:px-12 lg:px-20 pb-4 sm:pb-6 md:pb-12 lg:pb-16 z-20">
+        <div className="absolute inset-0 flex items-end justify-start px-2 sm:px-4 md:px-12 lg:px-20 pb-2 sm:pb-4 md:pb-12 lg:pb-16 z-20">
           <div className="max-w-3xl w-full">
-            {/* Company Name with Line */}
-            <div className="flex items-center gap-1.5 sm:gap-2 md:gap-3 mb-1.5 sm:mb-2 md:mb-3">
+            {/* Company Name with Line - Hidden on mobile, visible on desktop */}
+            <div className="hidden md:flex items-center gap-1.5 sm:gap-2 md:gap-3 mb-1.5 sm:mb-2 md:mb-3">
               <span className="w-6 sm:w-8 md:w-12 h-0.5 bg-[#E52713]"></span>
               <span className="text-[#E52713] text-[8px] sm:text-[10px] md:text-xs lg:text-sm font-bold uppercase tracking-widest">
                 GOGA STAINLESS
               </span>
             </div>
 
-            {/* Title */}
-            <h1 className="text-white font-black text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-[1.1] uppercase">
+            {/* Title - Smaller on mobile */}
+            <h1 className="text-white font-black text-xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl leading-[1.1] uppercase">
               About Us
             </h1>
 
-            {/* Subtitle */}
-            <p className="text-slate-200 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl mt-1.5 sm:mt-2 md:mt-3 lg:mt-4 max-w-2xl leading-relaxed">
+            {/* Subtitle - Smaller on mobile */}
+            <p className="text-slate-200 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl mt-1 sm:mt-1.5 md:mt-2 lg:mt-3 max-w-2xl leading-relaxed">
               Premium Quality Stainless Steel Products for Global Industries
             </p>
 
-            {/* Buttons */}
-            <div className="flex flex-wrap gap-1.5 sm:gap-2 md:gap-3 lg:gap-4 mt-3 sm:mt-4 md:mt-5 lg:mt-6">
+            {/* Buttons - Smaller on mobile */}
+            <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4 lg:gap-5 mt-3 sm:mt-4 md:mt-5 lg:mt-6">
               <Link
                 to="/products"
-                className="bg-[#E52713] hover:bg-[#B91F17] text-white font-semibold px-4 sm:px-5 md:px-6 lg:px-8 py-2 sm:py-2.5 md:py-3 lg:py-3.5 rounded-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-[#E52713]/25 flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm md:text-base"
+                className="bg-[#E52713] hover:bg-[#B91F17] text-white font-semibold px-4 sm:px-5 md:px-6 lg:px-8 py-2 sm:py-2.5 md:py-3 lg:py-3.5 rounded-lg sm:rounded-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-[#E52713]/25 flex items-center gap-1.5 sm:gap-2 md:gap-2.5 text-xs sm:text-sm md:text-base lg:text-lg"
               >
                 Explore Products
-                <FaArrowRight className="w-2.5 h-2.5 sm:w-3 sm:h-3 md:w-4 md:h-4 group-hover:translate-x-1 transition-transform" />
+                <FaArrowRight className="w-3 h-3 sm:w-3.5 sm:h-3.5 md:w-4 md:h-4 lg:w-5 lg:h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 to="/contact"
-                className="border-2 border-white/30 hover:border-white text-white font-semibold px-4 sm:px-5 md:px-6 lg:px-8 py-2 sm:py-2.5 md:py-3 lg:py-3.5 rounded-xl transition-all duration-300 hover:bg-white/10 text-xs sm:text-sm md:text-base"
+                className="border-2 border-white/30 hover:border-white text-white font-semibold px-4 sm:px-5 md:px-6 lg:px-8 py-2 sm:py-2.5 md:py-3 lg:py-3.5 rounded-lg sm:rounded-xl transition-all duration-300 hover:bg-white/10 text-xs sm:text-sm md:text-base lg:text-lg"
               >
                 Get a Quote
               </Link>
             </div>
 
-            {/* Bottom Section - Divider */}
-            <div className="mt-3 sm:mt-4 md:mt-5 lg:mt-6 pt-3 sm:pt-4 md:pt-5 lg:pt-6 border-t border-white/20">
+            {/* Bottom Section - Divider - Hidden on mobile, visible on desktop */}
+            <div className="hidden md:block mt-3 sm:mt-4 md:mt-5 lg:mt-6 pt-3 sm:pt-4 md:pt-5 lg:pt-6 border-t border-white/20">
               {/* Categories */}
               <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 md:gap-3 mb-1.5 sm:mb-2 md:mb-3">
-                <span className="text-white text-[7px] sm:text-[8px] md:text-[9px] lg:text-[11px] font-extrabold uppercase tracking-wider">
+                <span className="text-white/50 text-[7px] sm:text-[8px] md:text-[9px] lg:text-[11px] font-bold uppercase tracking-wider">
                   QUALITY STAINLESS STEEL PRODUCTS
                 </span>
               </div>
 
               <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 md:gap-3 lg:gap-4">
-                <span className="text-white sm:text-white/80 text-[8px] sm:text-[9px] md:text-[10px] lg:text-xs font-medium uppercase tracking-wider">
+                <span className="text-white/70 sm:text-white/80 text-[8px] sm:text-[9px] md:text-[10px] lg:text-xs font-medium uppercase tracking-wider">
                   SHEETS & PLATES
                 </span>
-                <span className="text-white text-[8px] sm:text-[9px] md:text-[10px] lg:text-xs">
+                <span className="text-white/30 text-[8px] sm:text-[9px] md:text-[10px] lg:text-xs">
                   |
                 </span>
-                <span className="text-white sm:text-white/80 text-[8px] sm:text-[9px] md:text-[10px] lg:text-xs font-medium uppercase tracking-wider">
+                <span className="text-white/70 sm:text-white/80 text-[8px] sm:text-[9px] md:text-[10px] lg:text-xs font-medium uppercase tracking-wider">
                   FLANGES
                 </span>
-                <span className="text-white text-[8px] sm:text-[9px] md:text-[10px] lg:text-xs">
+                <span className="text-white/30 text-[8px] sm:text-[9px] md:text-[10px] lg:text-xs">
                   |
                 </span>
-                <span className="text-white sm:text-white/80 text-[8px] sm:text-[9px] md:text-[10px] lg:text-xs font-medium uppercase tracking-wider">
+                <span className="text-white/70 sm:text-white/80 text-[8px] sm:text-[9px] md:text-[10px] lg:text-xs font-medium uppercase tracking-wider">
                   FASTENERS
                 </span>
               </div>
@@ -118,24 +119,24 @@ const About = () => {
               {/* Material Grades */}
               <div className="mt-1.5 sm:mt-2 md:mt-3 flex flex-wrap items-center gap-2 sm:gap-3 md:gap-4 lg:gap-6 text-[8px] sm:text-[9px] md:text-[10px] lg:text-[11px] font-bold uppercase tracking-wider">
                 <div className="flex items-center gap-1 sm:gap-2">
-                  <span className="text-white">S STEEL</span>
-                  <span className="text-white sm:text-white/80">
+                  <span className="text-white/50">S STEEL</span>
+                  <span className="text-white/70 sm:text-white/80">
                     04 / 316 / 321
                   </span>
                 </div>
-                <span className="text-white hidden sm:inline">|</span>
-                <span className="text-white sm:hidden">•</span>
+                <span className="text-white/20 hidden sm:inline">|</span>
+                <span className="text-white/20 sm:hidden">•</span>
                 <div className="flex items-center gap-1 sm:gap-2">
-                  <span className="text-white">DUPLEX STEEL</span>
-                  <span className="text-white sm:text-white/80">
+                  <span className="text-white/50">DUPLEX STEEL</span>
+                  <span className="text-white/70 sm:text-white/80">
                     SAT 2205 / 2507
                   </span>
                 </div>
                 <span className="text-white/20 hidden sm:inline">|</span>
                 <span className="text-white/20 sm:hidden">•</span>
                 <div className="flex items-center gap-1 sm:gap-2">
-                  <span className="text-white">TITANIUM</span>
-                  <span className="text-white sm:text-white/80">
+                  <span className="text-white/50">TITANIUM</span>
+                  <span className="text-white/70 sm:text-white/80">
                     GRADE 2 / 5
                   </span>
                 </div>
