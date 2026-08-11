@@ -101,7 +101,7 @@ const Hero1 = () => {
 
   return (
     <section
-      className="relative w-full max-w-full overflow-hidden bg-[#102F3D] md:!bg-transparent h-[calc(100vw*0.417)] md:h-[calc(102vh-var(--navbar-total-height))]"
+      className="relative w-full max-w-full overflow-hidden bg-[#102F3D] md:!bg-transparent h-[calc(96vw*0.417)] md:h-[calc(102vh-var(--navbar-total-height))]"
       style={{
         marginTop: "var(--navbar-total-height)",
         overflowX: "hidden",
