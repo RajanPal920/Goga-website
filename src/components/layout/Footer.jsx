@@ -13,16 +13,17 @@ import logoIcon from "../../assets/images/logo/goga-logo-icon.png";
 import logoWordmark from "../../assets/images/logo/goga-logo-wordmark.png";
 import company from "../../config/company";
 
-// ✅ Import exact slugs from your products.js for proper routing
+// ✅ Updated product categories according to PDF
 const productCategories = [
   { name: "Pipes & Tubes", slug: "pipes" },
   { name: "Buttweld Fittings", slug: "buttweld-fittings" },
-  { name: "Forged Fittings", slug: "forged-fittings" },
+  { name: "Forged Socketweld & Screwed Fittings", slug: "forged-fittings" },
   { name: "Flanges", slug: "flanges" },
+  { name: "Ferrule Fittings", slug: "ferrule-fittings" },
   { name: "Sheet, Plate & Coil", slug: "sheets" },
+  { name: "Round, Square & Hex Bars", slug: "round-bars" },
   { name: "Fasteners & Nut Bolts", slug: "fasteners" },
   { name: "Dairy Fittings & Valves", slug: "dairy-fittings" },
-  { name: "Round, Square & Hex Bars", slug: "round-bars" },
 ];
 
 const Footer = () => {
@@ -102,7 +103,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Product Range - Fixed Routing */}
+          {/* Product Range - Updated */}
           <div>
             <h3 className="text-lg font-bold uppercase tracking-wider mb-4 text-white border-b border-white/10 pb-2 flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-[#D92B20]"></span>

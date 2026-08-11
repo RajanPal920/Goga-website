@@ -1,5 +1,6 @@
 // src/pages/Contact/Contact.jsx
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import heroBg from "../../assets/images/industries/main-banner.webp";
 import {
   Building2,
@@ -20,11 +21,9 @@ import {
   X,
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { FaArrowRight } from "react-icons/fa";
 
-// ✅ FIXED: Added missing logo import
 import logo from "../../assets/images/logo/goga-logo-wordmark.png";
-// Note: Change this path if your actual logo file is named differently
-
 import logoIcon from "../../assets/images/logo/goga-logo-icon.png";
 import logoWordmark from "../../assets/images/logo/goga-logo-wordmark.png";
 import testimonials from "../../data/testimonials";
@@ -42,7 +41,6 @@ const Contact = () => {
   const [showSuccess, setShowSuccess] = useState(false);
   const [showError, setShowError] = useState(false);
 
-  // Auto-hide success toast after 6 seconds
   useEffect(() => {
     if (showSuccess) {
       const timer = setTimeout(() => {
@@ -52,7 +50,6 @@ const Contact = () => {
     }
   }, [showSuccess]);
 
-  // Auto-hide error toast after 5 seconds
   useEffect(() => {
     if (showError) {
       const timer = setTimeout(() => {
@@ -82,10 +79,8 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      // Format the email subject
       const subject = `Inquiry from ${formData.name} - GOGA STAINLESS`;
 
-      // Format the email body with all details
       const body =
         `%0A%0A` +
         `---------- INQUIRY DETAILS ----------%0A%0A` +
@@ -98,17 +93,13 @@ const Contact = () => {
         `---------- %0A` +
         `This inquiry was sent from the GOGA STAINLESS Website Contact Form`;
 
-      // ✅ FIXED: Removed space in email address
       const mailtoLink = `mailto:gogastainless@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
 
-      // Open default email client
       window.location.href = mailtoLink;
 
-      // Show success message
       setShowSuccess(true);
       setShowError(false);
 
-      // Reset form
       setFormData({
         name: "",
         phone: "",
@@ -125,7 +116,6 @@ const Contact = () => {
     }
   };
 
-  // Close toasts manually
   const closeSuccessToast = () => {
     setShowSuccess(false);
   };
@@ -136,9 +126,7 @@ const Contact = () => {
 
   return (
     <>
-      {/* =============================== */}
-      {/* SUCCESS TOAST - Floating Notification */}
-      {/* =============================== */}
+      {/* Success Toast */}
       <AnimatePresence>
         {showSuccess && (
           <motion.div
@@ -149,20 +137,17 @@ const Contact = () => {
             className="fixed top-6 left-1/2 -translate-x-1/2 z-[9999] w-full max-w-lg mx-4"
           >
             <div className="relative bg-gradient-to-r from-green-50 to-emerald-50 border border-green-200 rounded-2xl shadow-2xl p-5 overflow-hidden">
-              {/* Success Animation Bars */}
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-green-400 to-emerald-500"></div>
               <div className="absolute top-0 right-0 w-32 h-32 bg-green-500/5 rounded-full blur-2xl -mr-10 -mt-10"></div>
               <div className="absolute bottom-0 left-0 w-32 h-32 bg-emerald-500/5 rounded-full blur-2xl -ml-10 -mb-10"></div>
 
               <div className="relative flex items-start gap-4">
-                {/* Icon */}
                 <div className="flex-shrink-0">
                   <div className="w-12 h-12 rounded-full bg-green-500/10 flex items-center justify-center border border-green-200">
                     <CheckCircle className="w-6 h-6 text-green-500" />
                   </div>
                 </div>
 
-                {/* Content */}
                 <div className="flex-1 min-w-0">
                   <h4 className="text-sm font-bold text-green-800 uppercase tracking-wider">
                     Email Prepared Successfully!
@@ -177,7 +162,6 @@ const Contact = () => {
                   </div>
                 </div>
 
-                {/* Close Button */}
                 <button
                   onClick={closeSuccessToast}
                   className="flex-shrink-0 p-1 hover:bg-green-200/50 rounded-lg transition-colors text-green-600"
@@ -187,7 +171,6 @@ const Contact = () => {
                 </button>
               </div>
 
-              {/* Progress Bar - Auto dismiss indicator */}
               <div className="relative mt-3 w-full h-1 bg-green-200 rounded-full overflow-hidden">
                 <motion.div
                   initial={{ width: "100%" }}
@@ -201,9 +184,7 @@ const Contact = () => {
         )}
       </AnimatePresence>
 
-      {/* =============================== */}
-      {/* ERROR TOAST */}
-      {/* =============================== */}
+      {/* Error Toast */}
       <AnimatePresence>
         {showError && (
           <motion.div
@@ -252,25 +233,137 @@ const Contact = () => {
         )}
       </AnimatePresence>
 
+      {/* Hero Section */}
       {/* =============================== */}
-      {/* HERO SECTION */}
+      {/* HERO SECTION - WITH SAME OVERLAY AS HERO1 */}
       {/* =============================== */}
       <section
-        className="relative w-full max-w-full overflow-hidden h-[calc(100vw*0.417)] md:h-[calc(100vh-var(--navbar-total-height))]"
+        className="relative w-full max-w-full overflow-hidden bg-[#102F3D] md:!bg-transparent h-[calc(100vw*0.417)] md:h-[calc(102vh-var(--navbar-total-height))]"
         style={{
           marginTop: "var(--navbar-total-height)",
+          overflowX: "hidden",
+          backgroundColor: "transparent",
         }}
       >
         <img
           src={heroBg}
           alt="GOGA STAINLESS Hero Background"
           className="absolute inset-0 w-full h-full object-contain md:object-cover object-center select-none"
+          loading="eager"
         />
+
+        {/* ================= SAME OVERLAY ON MOBILE & DESKTOP ================= */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#173f52]/80 via-[#173f52]/40 to-transparent z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-[#173f52]/40 via-transparent to-transparent z-10"></div>
+        <div className="absolute inset-0 bg-[url('/src/assets/images/pattern-dots.svg')] opacity-10 z-10"></div>
+
+        {/* ================= BOTTOM GRADIENT SHADOW ================= */}
+        <div className="absolute inset-x-0 bottom-0 h-[70%] bg-gradient-to-t from-[#173f52]/90 via-[#173f52]/40 to-transparent z-10"></div>
+
+        {/* ================= TEXT CONTENT ================= */}
+        <div className="absolute inset-0 flex items-end justify-start px-3 sm:px-4 md:px-12 lg:px-20 pb-4 sm:pb-6 md:pb-12 lg:pb-16 z-20">
+          <div className="max-w-3xl w-full">
+            {/* Company Name with Line */}
+            <div className="flex items-center gap-1.5 sm:gap-2 md:gap-3 mb-1.5 sm:mb-2 md:mb-3">
+              <span className="w-6 sm:w-8 md:w-12 h-0.5 bg-[#E52713]"></span>
+              <span className="text-[#E52713] text-[8px] sm:text-[10px] md:text-xs lg:text-sm font-bold uppercase tracking-widest">
+                GOGA STAINLESS
+              </span>
+            </div>
+
+            {/* Title */}
+            <h1 className="text-white font-black text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-[1.1] uppercase">
+              Contact Us
+            </h1>
+
+            {/* Subtitle */}
+            <p className="text-slate-200 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl mt-1.5 sm:mt-2 md:mt-3 lg:mt-4 max-w-2xl leading-relaxed">
+              Your subtitle text goes here. Premium Quality Stainless Steel
+              Products for Global Industries.
+            </p>
+
+            {/* Buttons */}
+            <div className="flex flex-wrap gap-1.5 sm:gap-2 md:gap-3 lg:gap-4 mt-3 sm:mt-4 md:mt-5 lg:mt-6">
+              <Link
+                to="/products"
+                className="bg-[#E52713] hover:bg-[#B91F17] text-white font-semibold px-4 sm:px-5 md:px-6 lg:px-8 py-2 sm:py-2.5 md:py-3 lg:py-3.5 rounded-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-[#E52713]/25 flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm md:text-base"
+              >
+                Explore Products
+                <FaArrowRight className="w-2.5 h-2.5 sm:w-3 sm:h-3 md:w-4 md:h-4 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                to="/contact"
+                className="border-2 border-white/30 hover:border-white text-white font-semibold px-4 sm:px-5 md:px-6 lg:px-8 py-2 sm:py-2.5 md:py-3 lg:py-3.5 rounded-xl transition-all duration-300 hover:bg-white/10 text-xs sm:text-sm md:text-base"
+              >
+                Get a Quote
+              </Link>
+            </div>
+
+            {/* Bottom Section - Divider */}
+            <div className="mt-3 sm:mt-4 md:mt-5 lg:mt-6 pt-3 sm:pt-4 md:pt-5 lg:pt-6 border-t border-white/20">
+              {/* Categories */}
+              <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 md:gap-3 mb-1.5 sm:mb-2 md:mb-3">
+                <span className="text-white text-[7px] sm:text-[8px] md:text-[9px] lg:text-[11px] font-extrabold uppercase tracking-wider">
+                  QUALITY STAINLESS STEEL PRODUCTS
+                </span>
+              </div>
+
+              <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 md:gap-3 lg:gap-4">
+                <span className="text-white sm:text-white/80 text-[8px] sm:text-[9px] md:text-[10px] lg:text-xs font-medium uppercase tracking-wider">
+                  SHEETS & PLATES
+                </span>
+                <span className="text-white text-[8px] sm:text-[9px] md:text-[10px] lg:text-xs">
+                  |
+                </span>
+                <span className="text-white sm:text-white/80 text-[8px] sm:text-[9px] md:text-[10px] lg:text-xs font-medium uppercase tracking-wider">
+                  FLANGES
+                </span>
+                <span className="text-white text-[8px] sm:text-[9px] md:text-[10px] lg:text-xs">
+                  |
+                </span>
+                <span className="text-white sm:text-white/80 text-[8px] sm:text-[9px] md:text-[10px] lg:text-xs font-medium uppercase tracking-wider">
+                  FASTENERS
+                </span>
+              </div>
+
+              {/* Material Grades */}
+              <div className="mt-1.5 sm:mt-2 md:mt-3 flex flex-wrap items-center gap-2 sm:gap-3 md:gap-4 lg:gap-6 text-[8px] sm:text-[9px] md:text-[10px] lg:text-[11px] font-bold uppercase tracking-wider">
+                <div className="flex items-center gap-1 sm:gap-2">
+                  <span className="text-white">S STEEL</span>
+                  <span className="text-white sm:text-white/80">
+                    04 / 316 / 321
+                  </span>
+                </div>
+                <span className="text-white hidden sm:inline">|</span>
+                <span className="text-white sm:hidden">•</span>
+                <div className="flex items-center gap-1 sm:gap-2">
+                  <span className="text-white">DUPLEX STEEL</span>
+                  <span className="text-white sm:text-white/80">
+                    SAT 2205 / 2507
+                  </span>
+                </div>
+                <span className="text-white/20 hidden sm:inline">|</span>
+                <span className="text-white/20 sm:hidden">•</span>
+                <div className="flex items-center gap-1 sm:gap-2">
+                  <span className="text-white">TITANIUM</span>
+                  <span className="text-white sm:text-white/80">
+                    GRADE 2 / 5
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* ================= SLIDE INDICATOR ================= */}
+        <div className="absolute bottom-4 sm:bottom-6 md:bottom-8 right-4 sm:right-6 md:right-8 text-white/50 text-xs sm:text-sm font-medium hidden md:block z-20">
+          <span className="text-white">01</span>
+          <span className="mx-1">/</span>
+          <span>01</span>
+        </div>
       </section>
 
-      {/* =============================== */}
-      {/* TESTIMONIALS SECTION */}
-      {/* =============================== */}
+      {/* Testimonials Section */}
       <section className="w-full py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-12">
@@ -329,9 +422,7 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* =============================== */}
-      {/* DIRECTORY SECTION */}
-      {/* =============================== */}
+      {/* Directory Section */}
       <section className="w-full py-20 bg-slate-50 relative">
         <div className="absolute inset-0 bg-[linear-gradient(rgba(215,155,32,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(215,155,32,0.03)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
         <div className="absolute inset-0 bg-gradient-to-b from-slate-50 via-transparent to-slate-50 pointer-events-none"></div>
@@ -572,12 +663,10 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* =============================== */}
-      {/* FORM & INFO SECTION */}
-      {/* =============================== */}
+      {/* Form & Info Section */}
       <section className="w-full bg-white border-t border-slate-100">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-[1.5fr_1fr] shadow-2xl">
-          {/* LEFT SIDE - FORM */}
+          {/* Left Side - Form */}
           <motion.div
             variants={leftVariant}
             initial="hidden"
@@ -597,7 +686,6 @@ const Contact = () => {
               <span className="text-[#D92B20] block mt-1">Inquiry</span>
             </h2>
 
-            {/* Info note about email client */}
             <div className="mt-4 rounded-xl bg-blue-50 border border-blue-200 p-3 text-blue-700 text-xs font-medium flex items-center gap-2">
               <span className="text-lg">📧</span>
               This will open your default email client with pre-filled
@@ -618,7 +706,6 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* FORM */}
             <form onSubmit={handleSubmit} className="space-y-4 mt-6">
               <div className="grid sm:grid-cols-2 gap-x-6 gap-y-4">
                 <div className="space-y-1.5">
@@ -716,7 +803,7 @@ const Contact = () => {
             </form>
           </motion.div>
 
-          {/* RIGHT SIDE - INFO (Blue themed) */}
+          {/* Right Side - Info */}
           <motion.div
             variants={rightVariant}
             initial="hidden"
@@ -853,9 +940,7 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* =============================== */}
-      {/* MAP SECTION */}
-      {/* =============================== */}
+      {/* Map Section */}
       <section className="w-full py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center">
@@ -880,7 +965,6 @@ const Contact = () => {
             className="relative mt-12"
           >
             <div className="absolute top-6 right-6 hidden md:flex items-center gap-4 rounded-xl bg-white px-5 py-3 shadow-2xl border border-slate-200 z-20">
-              {/* ✅ FIXED: Uses imported logo variable */}
               <img
                 src={logo}
                 alt="GOGA STAINLESS"
@@ -901,7 +985,7 @@ const Contact = () => {
 
             <div className="overflow-hidden rounded-2xl border border-slate-200 shadow-2xl">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3773.344415865406!2d72.8138994!3d18.9602052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7ce1b7c8df23b%3A0x6b74e6f2b4c81010!2sP.B.+Marg%2C+Girgaon%2C+Mumbai%2C+Maharashtra+400004!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3773.344415865406!2d72.831571!3d18.9898411!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7ce171d455555%3A0xa92b2e172cc31cf1!2sGOGA%20STAINLESS!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin"
                 width="100%"
                 height="620"
                 style={{ border: 0 }}
@@ -909,6 +993,7 @@ const Contact = () => {
                 loading="lazy"
                 referrerPolicy="strict-origin-when-cross-origin"
                 className="w-full"
+                title="GOGA STAINLESS - Mumbai Office Location"
               />
             </div>
           </motion.div>
@@ -927,8 +1012,8 @@ const Contact = () => {
                   Head Office
                 </h3>
                 <p className="mt-3 leading-7 text-slate-300 text-sm">
-                  Plot No-408/428, Har-Har Wala Bldg, House No-62A, 3rd Floor,
-                  P.B. Marg, Mumbai-400004
+                  Plot No-408, Har-Har Wala Bldg, Office No-62 3rd Floor, P.B.
+                  Marg, Mumbai-400004, Maharashtra
                 </p>
                 <div className="mt-3 flex flex-wrap gap-4 text-sm">
                   <a
@@ -954,7 +1039,7 @@ const Contact = () => {
             </div>
 
             <a
-              href="https://maps.app.goo.gl/EQLmXyu12hGPeuM77?g_st=ac"
+              href="https://www.google.com/maps/dir//GOGA+STAINLESS,+Plot+No-408,+Har-Har+Wala+Bldg,+Office+No-62+3rd+Floor,+P.B.+Marg,+Mumbai-400+004,+Mumbai,+Maharashtra+400004/@19.4390303,72.8160861,14z"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 rounded-full bg-[#D92B20] hover:bg-[#c08a1a] px-8 py-4 text-lg font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-[#D92B20]/25"
@@ -966,9 +1051,7 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* =============================== */}
-      {/* WAREHOUSE FOOTER */}
-      {/* =============================== */}
+      {/* Warehouse Footer */}
       <section className="w-full py-4 bg-[#173F52] flex items-center justify-center border-t border-[#D92B20]/20">
         <h6 className="flex items-center gap-3 text-white text-sm md:text-base font-medium px-4 text-center">
           <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#D92B20] flex-shrink-0">
