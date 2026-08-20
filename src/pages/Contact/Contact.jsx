@@ -523,6 +523,17 @@ const Contact = () => {
                     gogastainless@gmail.com
                   </a>
                 </div>
+                <div className="mt-3 flex items-start gap-3 text-sm text-slate-500">
+                  <Globe2 className="w-4 h-4 text-[#D92B20] flex-shrink-0 mt-0.5" />
+                  <a
+                    href="https://gogastainless.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-[#D92B20] transition-colors break-all"
+                  >
+                    gogastainless.com
+                  </a>
+                </div>
               </div>
             </motion.div>
 
@@ -585,6 +596,17 @@ const Contact = () => {
                     className="hover:text-[#D92B20] transition-colors break-all"
                   >
                     gogastainless@gmail.com
+                  </a>
+                </div>
+                <div className="mt-3 flex items-start gap-3 text-sm text-slate-500">
+                  <Globe2 className="w-4 h-4 text-[#D92B20] flex-shrink-0 mt-0.5" />
+                  <a
+                    href="https://gogastainless.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-[#D92B20] transition-colors break-all"
+                  >
+                    gogastainless.com
                   </a>
                 </div>
               </div>
@@ -653,6 +675,19 @@ const Contact = () => {
                   </span>
                   <span className="text-sm text-slate-600 group-hover/link:text-[#D92B20] transition-colors break-all">
                     gogastainless@gmail.com
+                  </span>
+                </a>
+                <a
+                  href="https://gogastainless.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex flex-col hover:text-[#D92B20] transition-colors group/link"
+                >
+                  <span className="text-xs text-[#D92B20] font-semibold uppercase tracking-wider">
+                    Website
+                  </span>
+                  <span className="text-sm text-slate-600 group-hover/link:text-[#D92B20] transition-colors break-all">
+                    gogastainless.com
                   </span>
                 </a>
               </div>

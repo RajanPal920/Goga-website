@@ -1,6 +1,5 @@
 // src/data/certificates.js
-import { BadgeCheck, Receipt, Building2 } from "lucide-react";
-
+import { BadgeCheck, Receipt, Building2, FileCheck } from "lucide-react";
 
 const certificates = [
   {
@@ -12,9 +11,17 @@ const certificates = [
     icon: BadgeCheck,
     route: "/certificates/iso-9001",
   },
-
   {
     id: 2,
+    name: "GST Registration",
+    slug: "gst",
+    pdf: "/certificates/gst.pdf", // Make sure this file exists in public/certificates/
+    description: "GST Registration Certificate.",
+    icon: Receipt,
+    route: "/certificates/gst",
+  },
+  {
+    id: 3,
     name: "Udyam Registration",
     slug: "udyam",
     pdf: "/certificates/udyam.pdf",

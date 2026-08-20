@@ -29,7 +29,7 @@ const Header = () => {
       </div>
 
       {/* ISO CERTIFICATION */}
-      <div className="mt-0.5 ml-[52px] sm:ml-[60px] lg:ml-[82px] text-[7px] sm:text-[8px] lg:text-[10px] uppercase tracking-[0.12em] font-semibold text-[#1A3A5C] whitespace-nowrap">
+      <div className="mt-0.5 ml-[52px] sm:ml-[60px] lg:ml-[82px] text-[1px] sm:text-[8px] lg:text-[10px] uppercase tracking-[0.12em] font-semibold text-[#1A3A5C] whitespace-nowrap">
         AN ISO 9001:2015 CERTIFIED COMPANY
       </div>
     </Link>
