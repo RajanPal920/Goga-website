@@ -7,6 +7,7 @@ import {
   FaEnvelope,
   FaWhatsapp,
   FaShieldAlt,
+  FaGlobe,
 } from "react-icons/fa";
 import { HiChevronRight } from "react-icons/hi";
 import logoIcon from "../../assets/images/logo/goga-logo-icon.png";
@@ -191,6 +192,19 @@ const Footer = () => {
                   className="text-slate-200 hover:text-[#D92B20] transition-colors text-sm font-medium break-all"
                 >
                   {company.email}
+                </a>
+              </li>
+
+              {/* Add Website */}
+              <li className="flex items-center gap-3">
+                <FaGlobe className="w-5 h-5 text-[#D92B20] flex-shrink-0" />
+                <a
+                  href={company.websiteUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-slate-200 hover:text-[#D92B20] transition-colors text-sm font-medium"
+                >
+                  {company.website}
                 </a>
               </li>
             </ul>
