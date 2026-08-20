@@ -10,20 +10,22 @@ export const company = {
   gstin: "27AIWPL7180J2ZE",
   address: {
     plotNo: "Plot No-408/428",
-    building: "Har-Har Wala Bldg",
-    houseNo: "House No-62A",
+    building: "Harharwala Building, Plot 408",
+    houseNo: "Office No 62",
     floor: "3rd Floor",
-    street: "P.B. Marg",
+    street: "Patthe Bapurao Marg",
+    locality: "Golpitha Junction, Girgaon",
     city: "Mumbai",
+    district: "Mumbai",
     pincode: "400004",
     state: "Maharashtra",
     country: "India",
-    full: "Plot No-408/428, Har-Har Wala Bldg, House No-62A, 3rd Floor, P.B. Marg, Mumbai-400004",
+    full: "Office No 62, Harharwala Building, Plot 408, Patthe Bapurao Marg, Golpitha Junction, Girgaon, Mumbai-400004, Maharashtra",
     lines: [
-      "Plot No-408/428, Har-Har Wala Bldg,",
-      "House No-62A, 3rd Floor, P.B. Marg,",
-      "Mumbai-400004, Maharashtra"
-    ]
+      "Office No 62, Harharwala Building, Plot 408,",
+      "Patthe Bapurao Marg, Golpitha Junction, Girgaon,",
+      "Mumbai-400004, Maharashtra",
+    ],
   },
   phone: {
     telephone: "022-6659 5141",
@@ -42,8 +44,9 @@ export const company = {
   websiteUrl: "https://www.gogastainless.com",
   meta: {
     title: "GOGA STAINLESS | Stainless Steel & Industrial Products Supplier",
-    description: "GOGA STAINLESS is an ISO 9001:2015 certified company and supplier of stainless steel, pipes, tubes, fittings, flanges, sheets, plates, coils, fasteners, dairy fittings and industrial raw materials."
-  }
+    description:
+      "GOGA STAINLESS is an ISO 9001:2015 certified company and supplier of stainless steel, pipes, tubes, fittings, flanges, sheets, plates, coils, fasteners, dairy fittings and industrial raw materials.",
+  },
 };
 
 export default company;
