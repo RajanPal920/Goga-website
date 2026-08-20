@@ -16,7 +16,7 @@ import icon from "../../assets/images/logo/down.jpg";
 
 // ✅ FIXED IMPORTS: Correctly point to PDFs inside the /public folder
 // In Vite/React, files in /public are accessed directly from the root '/'
-const isoCertificate = "/certificates/iso-9001.pdf";
+const isoCertificate = "/certificates/gst.pdf";
 const udyamCertificate = "/certificates/udyam.pdf";
 
 const Hero3 = () => {
@@ -52,7 +52,7 @@ const Hero3 = () => {
   const handleDownload = () => {
     const link = document.createElement("a");
     link.href = isoCertificate;
-    link.download = "ISO-9001-GOGA-STAINLESS.pdf";
+    link.download = "GST-GOGA-STAINLESS.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
