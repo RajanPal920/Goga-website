@@ -9,7 +9,7 @@ export const company = {
   contactPerson: "MAHENDRA HATDIA",
   gstin: "27AIWPL7180J2ZE",
   address: {
-    plotNo: "Plot No-408/428",
+    plotNo: "Plot No-408",
     building: "Harharwala Building, Plot 408",
     houseNo: "Office No 62",
     floor: "3rd Floor",
@@ -22,7 +22,7 @@ export const company = {
     country: "India",
     full: "Office No 62, Harharwala Building, Plot 408, Patthe Bapurao Marg, Golpitha Junction, Girgaon, Mumbai-400004, Maharashtra",
     lines: [
-      "Office No 62, Harharwala Building, Plot 408,",
+      "3RD Floor, Office No 62, Harharwala Building, Plot 408,",
       "Patthe Bapurao Marg, Golpitha Junction, Girgaon,",
       "Mumbai-400004, Maharashtra",
     ],

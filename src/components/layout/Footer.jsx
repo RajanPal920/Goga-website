@@ -135,11 +135,11 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <FaMapMarkerAlt className="w-5 h-5 text-[#D92B20] flex-shrink-0 mt-0.5" />
                 <span className="text-slate-300 text-sm leading-relaxed">
-                  {company.address.plotNo}, {company.address.building},<br />
+                  {/* {company.address.plotNo}, {company.address.building},<br />
                   {company.address.houseNo}, {company.address.floor},{" "}
                   {company.address.street},<br />
-                  {company.address.city}-{company.address.pincode},{" "}
-                  {company.address.state}
+                  {company.address.city}-{company.address.pincode},{" "} */}
+                  {company.address.lines}
                 </span>
               </li>
 
