@@ -219,7 +219,23 @@ export default function Navbar() {
                     />
                   </div>
                 </div>
-                <div className="mt-[-12px] ml-[52px] sm:ml-[60px] lg:ml-[90px] text-[7px] sm:text-[7px] lg:text-[9.5px] leading-none uppercase tracking-[0.15em] font-bold text-[#1A3A5C] whitespace-nowrap">
+                <div
+                  className="
+    mt-[-12px]
+    ml-[95px]
+    sm:ml-[110px]
+    lg:ml-[215px]
+    text-[5.9px]
+    sm:text-[6px]
+    lg:text-[10px]
+    leading-none
+    uppercase
+    tracking-[0.1em]
+    font-bold
+    text-[#1A3A5C]
+    whitespace-nowrap
+  "
+                >
                   {company.certification ||
                     "AN ISO 9001:2015 CERTIFIED COMPANY"}
                 </div>
